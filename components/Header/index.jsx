@@ -1,6 +1,7 @@
 import Image  from 'next/image'
 import links from '../../data/links.json'
 import HeaderLinks from '../Atoms/HeaderLink'
+import Logo from '../../assets/logo.png'
 export default function Header() {
    return (
       <div
@@ -20,9 +21,11 @@ export default function Header() {
             <div className="px-4 w-60 max-w-full">
               <a href="index.html" className="navbar-logo w-full block py-5">
                 <Image
-                  src="logo.png"
+                  src={Logo}
                   alt="logo"
                   width={80}
+                  height={80}
+                  layout="fixed"
                   className="header-logo"
                 />
               </a>

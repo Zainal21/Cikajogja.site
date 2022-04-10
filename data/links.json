@@ -1,13 +1,16 @@
 [{
-        "name": "Blog",
-        "url": "/blog"
+        "id": 1,
+        "name": "Home",
+        "url": "/"
     },
     {
-        "name": "Projects",
+        "id": 2,
+        "name": " Our Works",
         "url": "/projects"
     },
     {
-        "name": "About",
-        "url": "/about"
+        "id": 3,
+        "name": " Blogs",
+        "url": "/blogs"
     }
 ]

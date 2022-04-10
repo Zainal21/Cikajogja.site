@@ -9,7 +9,7 @@ export default function Blogs() {
       </Head>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
-          Cooming Soon{' '}
+          Cooming Soon
           <a className="text-red-600" href="https://nextjs.org">
             Blog!
           </a>

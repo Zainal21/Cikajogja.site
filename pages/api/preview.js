@@ -1,4 +1,4 @@
-import { getPreviewPostBySlug } from '@/lib/api'
+import { getPreviewPostBySlug } from './api'
 
 export default async function preview(req, res) {
   if (

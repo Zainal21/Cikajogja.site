@@ -13,7 +13,7 @@ export default function AvatarPost({ name, picture }) {
           />
         )}
       </div>
-      <div className="text-xl font-bold">{name}</div>
+      <div className="text-xl font-bold">Muhamad Zainal Arifin</div>
     </div>
   )
 }

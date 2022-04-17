@@ -1,94 +1,80 @@
+import React, { useState, useEffect } from "react";
 import Image  from 'next/image'
-import links from '../../data/links.json'
 import HeaderLinks from '../Atoms/HeaderLink'
+import BottomLinks from '../Atoms/BottomLinks'
+import links from '../../data/links.json'
 import Logo from '../../assets/logo.png'
-export default function Header() {
-   return (
-      <div
-        className="
-          ud-header
-          bg-transparent
-          absolute
-          top-0
-          left-0
-          z-40
-          w-full
-          flex
-          items-center
-        ">
-        <div className="container mx-auto">
-          <div className="flex mx-4 items-center justify-between relative">
-            <div className="px-4 w-60 max-w-full">
-              <a href="index.html" className="navbar-logo w-full block py-5">
-                <Image
-                  src={Logo}
-                  alt="logo"
-                  width={80}
-                  height={80}
-                  layout="fixed"
-                  className="header-logo"
-                />
-              </a>
-            </div>
-            <div className="flex px-4 justify-between items-end ml-auto">
-              <div>
-                <button
-                  id="navbarToggler"
-                  className="
-                    block
-                    absolute
-                    right-4
-                    top-1/2
-                    -translate-y-1/2
-                    lg:hidden
-                    focus:ring-2
-                    ring-primary
-                    px-3
-                    py-[6px]
-                    rounded-lg
-                  ">
-                  <span
-                    className="relative w-[30px] h-[2px] my-[6px] block bg-white"></span>
-                  <span
-                    className="relative w-[30px] h-[2px] my-[6px] block bg-white"></span>
-                  <span
-                    className="relative w-[30px] h-[2px] my-[6px] block bg-white"></span>
-                </button>
-                <nav
-                  id="navbarCollapse"
-                  className="
-                    absolute
-                    py-5
-                    lg:py-0 lg:px-4
-                    xl:px-6
-                    bg-white
-                    lg:bg-transparent
-                    shadow-lg
-                    rounded-lg
-                    max-w-[250px]
-                    w-full
-                    lg:max-w-full lg:w-full
-                    right-4
-                    top-full
-                    hidden
-                    lg:block lg:static lg:shadow-none
-                    text-left
-                  ">
-                  <ul className="blcok lg:flex">
-                     {
-                        links.map((item) => (
-                           <HeaderLinks
-                           name={item.name}
-                           link={item.url}
-                           key={item.id}/>
-                        ))
-                     }
-                  </ul>
-                </nav>
-              </div>
-            </div>
+
+export default function Header(){
+  const [scrollActive, setScrollActive] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollActive(window.scrollY > 20);
+    });
+  }, []);
+  return (
+    <>
+      <header
+        className={
+          "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
+          (scrollActive ? " shadow-md pt-0" : " pt-4")
+        }
+      >
+        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
+          <div className="col-start-1 col-end-2 flex items-center">
+          <Image
+              src={Logo}
+              alt="logo"
+              width={70}
+              height={55}
+              layout="fixed"
+              className="header-logo"
+            />
           </div>
+          <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
+            {
+              links.map(item => ((
+                <HeaderLinks 
+                  name={item.name}
+                  link={item.url}
+                  key={item.id}/>
+              )))
+              // 
+            }
+          </ul>
+        </nav>
+      </header>
+      {/* Mobile Navigation */}
+      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+        <div className="bg-white-500 sm:px-3">
+          <ul className="flex w-full justify-between items-center text-black-500">
+          {
+              links.map(item => ((
+                <BottomLinks 
+                  name={item.name}
+                  link={item.url}
+                  key={item.id}
+                  Children={
+                    <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  }/>
+              )))
+            }
+          </ul>
         </div>
-      </div>
-   )
-}
+      </nav>
+      {/* End Mobile Navigation */}
+    </>
+  );
+};
+

@@ -25,7 +25,7 @@ export default function imageCover({ title, url, slug }) {
             sizes: 'data-sizes',
           }}
           htmlAttributes={{
-            src: `${url}?auto=format,compress&q=1&blur=500&w=auto`,
+            src: `${url}?auto=format,compress&q=1&w=auto`,
           }}
         />
       {/* )} */}

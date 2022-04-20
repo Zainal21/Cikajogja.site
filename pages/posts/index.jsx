@@ -1,10 +1,10 @@
-import Container from '../components/Atoms/Container'
-import PostSection from '../components/Content/PostSection'
-import { getAllPosts } from '../lib/api'
+import Container from '../../components/Atoms/Container'
+import PostSection from '../../components/Content/PostSection'
+import { getAllPosts } from '../../lib/api'
 import Head from 'next/head'
 
-export default function Blogs({ allPosts }) {
-  const posts = allPosts[0]
+export default function Posts({ allPosts }) {
+  const posts = allPosts
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -14,15 +14,17 @@ export default function Blogs({ allPosts }) {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 ">
         <Container>
             {posts && (
-              <PostSection
-                title={posts.title}
-                thumbnail={posts.metadata.cover_image}
-                date={posts.created_at}
-                author={posts.metadata.authors}
-                AvatarImage={posts.metadata.avatar}
-                slug={posts.slug}
-                excerpt={posts.metadata.excerpt}
+              posts.map(item => ((
+                <PostSection
+                title={item.title}
+                thumbnail={item.metadata.cover_image}
+                date={item.created_at}
+                author={item.metadata.authors}
+                AvatarImage={item.metadata.avatar}
+                slug={item.slug}
+                excerpt={item.metadata.excerpt}
               />
+              )))
             )}
           </Container>
           <h1 className="text-3xl font-bold">
@@ -38,9 +40,7 @@ export default function Blogs({ allPosts }) {
 
 export async function getStaticProps({ preview }) {
   const allPosts = (await getAllPosts(preview)) || []
-  // const allPosts = await getAllPosts(preview)
   console.log(allPosts);
-
   return {
     props: { allPosts },
   }

@@ -4762,6 +4762,13 @@ symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
+tailgrids@^1.1.6, tailgrids@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/tailgrids/-/tailgrids-1.1.7.tgz#2b4ac426a7e90f81fdf29cb396dd8c7a677400c0"
+  integrity sha512-osqy2ArBL1Pk1oxHB+jHBGsN4332jvpmgKdXYWsU9bQXduJ0WyQPH5kXVnesQ1KYZBujVv7aKsKyDEYQvRuGcw==
+  dependencies:
+    tailgrids "^1.1.6"
+
 tailwindcss@^3.0.23:
   version "3.0.23"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.23.tgz#c620521d53a289650872a66adfcb4129d2200d10"

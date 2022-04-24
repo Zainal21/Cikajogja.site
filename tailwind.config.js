@@ -34,7 +34,7 @@ module.exports = {
         primary: "#3056D3",
         secondary: "#13C296",
         "body-color": "#637381",
-        warning: "#F9C107",
+        warning: "#ff5615",
         danger: "#DC3545",
         success: "#3CA745",
         info: "#3BA2B8",
@@ -61,4 +61,4 @@ module.exports = {
     extend: {},
   },
   plugins: [require("tailgrids/plugin")],
-}
+};

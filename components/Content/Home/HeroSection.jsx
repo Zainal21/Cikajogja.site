@@ -1,3 +1,7 @@
+import Image from "next/image";
+import HeroImage from "../../../assets/hero/Report.svg";
+import CircleElement from "../../Icons/CircleElement";
+
 export default function HeroSection({ children }) {
   return (
     <div className="relative bg-white pt-[120px] pb-[110px] lg:pt-[150px]">
@@ -5,12 +9,12 @@ export default function HeroSection({ children }) {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-5/12">
             <div className="hero-content">
-              <h1 className="mb-3 text-4xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
-                CV.Cipta <span className="text-red-600">Karya Abadi</span>
+              <h1 className="mb-3 text-3xl font-bold leading-snug text-dark sm:text-[42px] lg:text-[40px] xl:text-[42px]">
+                CV.Cipta <span className="text-danger">Karya Informatika</span>
                 <br />
               </h1>
               <p className="mb-8 max-w-[480px] text-md text-body-color">
-                <strong>CV Cipta Karya Abadi</strong> is an information
+                <strong>CV Cipta Karya (CIKA) JOGJA</strong> is an information
                 technology solutions provider company based in Sleman D.I
                 Yogyakarta. We've been in the works since July 2012. You Want
                 IT, We Make IT !!!, Independent Consultant With IT Based
@@ -42,41 +46,13 @@ export default function HeroSection({ children }) {
           <div className="w-full px-4 lg:w-6/12">
             <div className="lg:ml-auto lg:text-right">
               <div className="relative z-10 inline-block pt-11 lg:pt-0">
-                {/* <img src="assets/images/hero/Illustration.png" alt="hero" className="max-w-full lg:ml-auto" /> */}
+                <Image
+                  src={HeroImage}
+                  alt="hero"
+                  className="max-w-full lg:ml-auto"
+                />
                 <span className="absolute -left-8 -bottom-8 z-[-1]">
-                  <svg
-                    width="93"
-                    height="93"
-                    viewBox="0 0 93 93"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="2.5" cy="2.5" r="2.5" fill="#F9C107" />
-                    <circle cx="2.5" cy="24.5" r="2.5" fill="#F9C107" />
-                    <circle cx="2.5" cy="46.5" r="2.5" fill="#F9C107" />
-                    <circle cx="2.5" cy="68.5" r="2.5" fill="#F9C107" />
-                    <circle cx="2.5" cy="90.5" r="2.5" fill="#F9C107" />
-                    <circle cx="24.5" cy="2.5" r="2.5" fill="#F9C107" />
-                    <circle cx="24.5" cy="24.5" r="2.5" fill="#F9C107" />
-                    <circle cx="24.5" cy="46.5" r="2.5" fill="#F9C107" />
-                    <circle cx="24.5" cy="68.5" r="2.5" fill="#F9C107" />
-                    <circle cx="24.5" cy="90.5" r="2.5" fill="#F9C107" />
-                    <circle cx="46.5" cy="2.5" r="2.5" fill="#F9C107" />
-                    <circle cx="46.5" cy="24.5" r="2.5" fill="#F9C107" />
-                    <circle cx="46.5" cy="46.5" r="2.5" fill="#F9C107" />
-                    <circle cx="46.5" cy="68.5" r="2.5" fill="#F9C107" />
-                    <circle cx="46.5" cy="90.5" r="2.5" fill="#F9C107" />
-                    <circle cx="68.5" cy="2.5" r="2.5" fill="#F9C107" />
-                    <circle cx="68.5" cy="24.5" r="2.5" fill="#F9C107" />
-                    <circle cx="68.5" cy="46.5" r="2.5" fill="#F9C107" />
-                    <circle cx="68.5" cy="68.5" r="2.5" fill="#F9C107" />
-                    <circle cx="68.5" cy="90.5" r="2.5" fill="#F9C107" />
-                    <circle cx="90.5" cy="2.5" r="2.5" fill="#F9C107" />
-                    <circle cx="90.5" cy="24.5" r="2.5" fill="#F9C107" />
-                    <circle cx="90.5" cy="46.5" r="2.5" fill="#F9C107" />
-                    <circle cx="90.5" cy="68.5" r="2.5" fill="#F9C107" />
-                    <circle cx="90.5" cy="90.5" r="2.5" fill="#F9C107" />
-                  </svg>
+                  <CircleElement />
                 </span>
               </div>
             </div>

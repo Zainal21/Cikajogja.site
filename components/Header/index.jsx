@@ -27,8 +27,8 @@ export default function Header() {
               alt="logo"
               width={70}
               height={55}
-              layout="fixed"
               className="header-logo"
+              priority
             />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
@@ -38,7 +38,7 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed lg:hidden bg-gray-100  py-5 bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             {links.map((item) => (

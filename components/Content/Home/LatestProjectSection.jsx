@@ -1,39 +1,9 @@
 import SectionTitle from "../../Atoms/SectionTitle";
 import ProjectCard from "../../Atoms/ProjectCard";
 import PortfolioImage from "../../../assets/portfolio/jtl-compro.png";
-export default function LatestProject({ children }) {
-  const Portfolios = [
-    {
-      id: 1,
-      category: "Web Development",
-      name: "Company Profile",
-    },
-    {
-      id: 2,
-      category: "Web Development",
-      name: "Company Profile",
-    },
-    {
-      id: 3,
-      category: "Web Development",
-      name: "Company Profile",
-    },
-    {
-      id: 4,
-      category: "Web Development",
-      name: "Company Profile",
-    },
-    {
-      id: 5,
-      category: "Web Development",
-      name: "Company Profile",
-    },
-    {
-      id: 6,
-      category: "Web Development",
-      name: "Company Profile",
-    },
-  ];
+
+export default function LatestProject(props) {
+  const current_project = props.projects.slice(0, 3);
   return (
     <div className="container">
       <SectionTitle
@@ -42,7 +12,7 @@ export default function LatestProject({ children }) {
         titleDescription="We work along with clients to create digital business needs"
       />
       <div className="-mx-4 flex flex-wrap">
-        {Portfolios.map((item) => (
+        {current_project.map((item) => (
           <ProjectCard
             image={PortfolioImage}
             category={item.category}

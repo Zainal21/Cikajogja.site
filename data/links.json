@@ -5,12 +5,12 @@
     },
     {
         "id": 2,
-        "name": " About us",
+        "name": "About",
         "url": "/about"
     },
     {
         "id": 3,
-        "name": " Our Works",
+        "name": "Projects",
         "url": "/projects"
     },
     {

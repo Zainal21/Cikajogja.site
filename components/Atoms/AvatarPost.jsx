@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function AvatarPost({ name, picture }) {
   return (
@@ -15,5 +15,5 @@ export default function AvatarPost({ name, picture }) {
       </div>
       <div className="text-xl font-bold">Muhamad Zainal Arifin</div>
     </div>
-  )
+  );
 }

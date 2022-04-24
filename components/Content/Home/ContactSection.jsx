@@ -1,7 +1,3 @@
 export default function ContactSection(props) {
-   return (
-    <div class="container">
-      
-    </div>
-   )
- }
+  return <div class="container"></div>;
+}

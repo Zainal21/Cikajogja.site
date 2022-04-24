@@ -1,9 +1,9 @@
 import Container from '../../components/Atoms/Container'
-import PostSection from '../../components/Content/PostSection'
+import PostSection from '../../components/Content/Blogs/PostSection'
 import { getAllPosts } from '../../lib/api'
 import Head from 'next/head'
 
-export default function Posts({ allPosts }) {
+export default function Blogs({ allPosts }) {
   const posts = allPosts
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">

@@ -1,7 +1,7 @@
 
-import Avatar from '../Atoms/AvatarPost'
-import Date from '../Atoms/DatePost'
-import CoverImage from '../Atoms/ImageCover'
+import Avatar from '../../Atoms/AvatarPost'
+import Date from '../../Atoms/DatePost'
+import CoverImage from '../../Atoms/ImageCover'
 import Link from 'next/link'
 
 export default function PostSection({

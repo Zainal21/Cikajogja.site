@@ -1,8 +1,7 @@
-
-import Avatar from './AvatarPost'
-import Date from './DatePost'
-import CoverImage from './ImageCover'
-import PostTitle from './PostTitle'
+import Avatar from "./AvatarPost";
+import Date from "./DatePost";
+import CoverImage from "./ImageCover";
+import PostTitle from "./PostTitle";
 
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
@@ -26,6 +25,5 @@ export default function PostHeader({ title, coverImage, date, author }) {
         </div>
       </div>
     </>
-  )
+  );
 }
-  

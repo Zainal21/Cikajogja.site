@@ -3,7 +3,7 @@ export default function SectionTitle(props) {
       <div className="mx-4 flex flex-wrap">
          <div className="w-full px-4">
             <div className="mx-auto mb-[60px] max-w-[510px] text-center">
-               <span className="mb-2 block text-lg font-semibold text-warning">
+               <span className="mb-2 block text-lg font-semibold text-red-600">
                   {props.titleHint}
                </span>
                <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">

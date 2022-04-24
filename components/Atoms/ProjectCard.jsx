@@ -7,7 +7,7 @@ export default function ProjectCard(props) {
                <Image src={props.image} alt="portfolio" className="w-full" />
             </div>
             <div className="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
-               <span className="mb-2 block text-sm font-semibold text-warning">
+               <span className="mb-2 block text-sm font-semibold text-red-600">
                   {props.category}
                </span>
                <h3 className="mb-4 text-xl font-bold text-dark">

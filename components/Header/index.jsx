@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import HeaderLinks from "../Atoms/HeaderLink";
 import BottomLinks from "../Atoms/BottomLinks";
-import links from "../../data/links.json";
 import Logo from "../../assets/logo.png";
 
 export default function Header() {
@@ -12,11 +11,31 @@ export default function Header() {
       setScrollActive(window.scrollY > 20);
     });
   }, []);
+
+  const links = [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "About",
+      url: "/about",
+    },
+    {
+      name: "Projects",
+      url: "/projects",
+    },
+    {
+      name: " Blogs",
+      url: "/blogs",
+    },
+  ];
+
   return (
     <>
       <header
         className={
-          "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
+          "fixed top-0 w-full  z-30 bg-white transition-all " +
           (scrollActive ? " shadow-md pt-0" : " pt-4")
         }
       >
@@ -27,8 +46,8 @@ export default function Header() {
               alt="logo"
               width={70}
               height={55}
-              layout="fixed"
               className="header-logo"
+              priority
             />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
@@ -38,8 +57,7 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      {/* Mobile Navigation */}
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed lg:hidden bg-white shadow  py-5 bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             {links.map((item) => (
@@ -68,7 +86,6 @@ export default function Header() {
           </ul>
         </div>
       </nav>
-      {/* End Mobile Navigation */}
     </>
   );
 }

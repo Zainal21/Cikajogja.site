@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import HeaderLinks from "../Atoms/HeaderLink";
 import BottomLinks from "../Atoms/BottomLinks";
-import links from "../../data/links.json";
 import Logo from "../../assets/logo.png";
 
 export default function Header() {
@@ -12,6 +11,26 @@ export default function Header() {
       setScrollActive(window.scrollY > 20);
     });
   }, []);
+
+  const links = [
+    {
+      name: "Home",
+      url: "/",
+    },
+    {
+      name: "About",
+      url: "/about",
+    },
+    {
+      name: "Projects",
+      url: "/projects",
+    },
+    {
+      name: " Blogs",
+      url: "/blogs",
+    },
+  ];
+
   return (
     <>
       <header
@@ -38,7 +57,7 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <nav className="fixed lg:hidden bg-gray-100  py-5 bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed lg:hidden bg-white shadow  py-5 bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
             {links.map((item) => (

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import SectionTitle from "../components/Atoms/SectionTitle";
 import ProjectCard from "../components/Atoms/ProjectCard";
 import PortfolioImage from "../assets/portfolio/jtl-compro.png";

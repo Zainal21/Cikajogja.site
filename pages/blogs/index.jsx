@@ -10,21 +10,29 @@ export default function Blogs() {
         <title>Home | Cikajogja</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-        <div className="container mt-10">
-          {/* <SectionTitle
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <h1 className="text-3xl font-bold">
+          Cooming Soon{" "}
+          <a className="text-red-600" href="https://nextjs.org">
+            New Blog Cikajogja.com!
+          </a>
+        </h1>
+      </main>
+      {/* <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+        <div className="container mt-10"> */}
+      {/* <SectionTitle
             titleMain="Our Recent News"
             titleDescription="There are many variations of passages of Lorem Ipsum available
             but the majority have suffered alteration in some form."
           /> */}
-          <div className="mx-4 mt-5 flex flex-wrap">
+      {/* <div className="mx-4 mt-5 flex flex-wrap">
             <h1 className="text-3xl font-bold">
               Cooming Soon{" "}
               <a className="text-red-600" href="https://nextjs.org">
                 Articles of New Cikajogja.com!
               </a>
-            </h1>
-            {/* {blogs.map((item) => (
+            </h1> */}
+      {/* {blogs.map((item) => (
             <BlogCard
               blogDate={item.date}
               blogTitle={item.title}
@@ -32,9 +40,9 @@ export default function Blogs() {
               key={item.id}
             />
           ))} */}
-          </div>
-        </div>
-      </section>
+      {/* </div> */}
+      {/* </div>
+      </section> */}
     </>
   );
 }

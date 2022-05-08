@@ -12,20 +12,20 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-        <div className="container mt-10">
-          {/* <SectionTitle
+      {/* <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+        <div className="container mt-10"> */}
+      {/* <SectionTitle
             titleMain="Our Recent Projects"
             titleDescription="We work along with clients to create digital business needs"
           /> */}
-          <h1 className="text-3xl font-bold">
+      {/* <h1 className="text-3xl font-bold">
             Cooming Soon{" "}
             <a className="text-red-600" href="https://nextjs.org">
               Our Work in New Cikajogja.com!
             </a>
-          </h1>
+          </h1> */}
 
-          {/* <div class="mx-4 flex flex-wrap">
+      {/* <div class="mx-4 flex flex-wrap">
             {projects.map((item) => (
               <ProjectCard
                 image={PortfolioImage}
@@ -35,8 +35,17 @@ export default function Projects() {
               />
             ))}
           </div> */}
-        </div>
-      </section>
+      {/* </div> */}
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <h1 className="text-3xl font-bold">
+          Cooming Soon{" "}
+          <a className="text-red-600" href="https://nextjs.org">
+            About New Cikajogja.com!
+          </a>
+        </h1>
+      </main>
+
+      {/* </section> */}
     </>
   );
 }

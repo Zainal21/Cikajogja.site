@@ -14,10 +14,10 @@ export default function Projects() {
 
       <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
         <div className="container mt-10">
-          <SectionTitle
+          {/* <SectionTitle
             titleMain="Our Recent Projects"
             titleDescription="We work along with clients to create digital business needs"
-          />
+          /> */}
           <h1 className="text-3xl font-bold">
             Cooming Soon{" "}
             <a className="text-red-600" href="https://nextjs.org">

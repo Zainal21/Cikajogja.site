@@ -12,11 +12,11 @@ export default function Blogs() {
       </Head>
       <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
         <div className="container mt-10">
-          <SectionTitle
+          {/* <SectionTitle
             titleMain="Our Recent News"
             titleDescription="There are many variations of passages of Lorem Ipsum available
             but the majority have suffered alteration in some form."
-          />
+          /> */}
           <div className="mx-4 mt-5 flex flex-wrap">
             <h1 className="text-3xl font-bold">
               Cooming Soon{" "}

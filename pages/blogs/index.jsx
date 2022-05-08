@@ -1,3 +1,4 @@
+import Head from "next/head";
 import SectionTitle from "../../components/Atoms/SectionTitle";
 import BlogCard from "../../components/Atoms/BlogCard";
 import blogs from "../../data/dummy_blog.json";

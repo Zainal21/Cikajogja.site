@@ -18,10 +18,6 @@ export default function Header() {
       url: "/",
     },
     {
-      name: "About",
-      url: "/about",
-    },
-    {
       name: "Projects",
       url: "/projects",
     },

@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeaderLinks from "../Atoms/HeaderLink";
 import BottomLinks from "../Atoms/BottomLinks";
 import Logo from "../../assets/logo.png";
+import { HiHome, HiGlobe, HiBookOpen } from "react-icons/hi";
 
 export default function Header() {
   const [scrollActive, setScrollActive] = useState(false);
@@ -16,14 +17,17 @@ export default function Header() {
     {
       name: "Home",
       url: "/",
+      icon: <HiHome />,
     },
     {
       name: "Projects",
       url: "/projects",
+      icon: <HiGlobe />,
     },
     {
       name: " Blogs",
       url: "/blogs",
+      icon: <HiBookOpen />,
     },
   ];
 
@@ -47,36 +51,21 @@ export default function Header() {
             />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
-            {links.map((item) => (
-              <HeaderLinks name={item.name} link={item.url} key={item.id} />
+            {links.map((item, index) => (
+              <HeaderLinks name={item.name} link={item.url} key={index} />
             ))}
           </ul>
         </nav>
       </header>
-      <nav className="fixed lg:hidden bg-white shadow  py-5 bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
+      <nav className="fixed lg:hidden bg-white shadow  py-5 bottom-0  left-0 right-0 z-20 px-4 sm:px-8 shadow-t ">
         <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
-            {links.map((item) => (
+            {links.map((item, index) => (
               <BottomLinks
                 name={item.name}
                 link={item.url}
-                key={item.id}
-                Children={
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                }
+                icon={item.icon}
+                key={index}
               />
             ))}
           </ul>

@@ -1,8 +1,9 @@
-import Header from "../Header";
+// import Header from "../Header";
 import Footer from "../Footer";
+import Header from "../Header";
 export default function Layout({ children }) {
   return (
-    <main className="bg-gray-100">
+    <main>
       <Header />
       <main>{children}</main>
       <Footer />

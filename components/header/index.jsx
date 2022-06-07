@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import HeaderLinks from "../Atoms/HeaderLink";
-import BottomLinks from "../Atoms/BottomLinks";
+import HeaderLinks from "../elements/header-links";
+import BottomLinks from "../elements/bottom-links";
 import Logo from "../../assets/logo.png";
 import { HiHome, HiGlobe, HiBookOpen } from "react-icons/hi";
 
